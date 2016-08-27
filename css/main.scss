@@ -38,6 +38,11 @@ header {
   border-bottom: 5px solid $brand-color;
 }
 
+main .container {
+  padding: 0px;
+  width: 100%;
+}
+
 nav.navbar.navbar-default {
   background: none;
   padding: 10px 0px;
@@ -75,7 +80,10 @@ nav.navbar.navbar-default {
     }
   }
 }
-section h2, section h3 {
-  border-bottom: 5px solid $brand-color;
-  padding-bottom: 10px;
+section {
+  h2, h3 { 
+    border-bottom: 5px solid $brand-color;
+    padding-bottom: 10px;
+
+  }
 }
