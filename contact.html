@@ -2,10 +2,34 @@
 layout: default
 ---
 
-<div class="home">
+<div class="contact">
 
-  <h1 class="page-heading">Contact Me!</h1>
+  <h1 class="page-heading">Contact Me</h1>
 
-  <p>Placeholder</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 contact-info">
+        <img src="http://placehold.it/250x250">
+        <h3>Aaron Fruth</h3>
+        <p>Bacon ipsum dolor amet beef ribs cupim sirloin sausage meatloaf tail boudin doner turkey jowl pork hamburger ham hock. Pig tenderloin andouille jowl beef ribs. Fatback frankfurter drumstick cow pastrami prosciutto leberkas. Venison beef ribs shankle turkey chuck. Beef hamburger pork belly picanha shank ham hock. </p>
+      </div>
+    
+      <div class="col-md-8">
+        <div class="panel">
+          <div class="panel-heading">
+            <h3><span class="glyphicon glyphicon-envelope"></span>Send an Email</h3>
+          </div>
+          <div class="panel-body">
+            
+            <p>Corned beef ball tip ribeye strip steak, tongue shankle cupim pork belly ground round shank beef ribs alcatra. Bresaola shoulder shank ham strip steak, pastrami meatball bacon drumstick short ribs beef ribs spare ribs. Shankle biltong andouille prosciutto tri-tip. Prosciutto picanha strip steak.</p>
+            
+            {% include contact_form.html %}
+
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
 
 </div>

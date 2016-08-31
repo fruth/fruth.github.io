@@ -4,6 +4,12 @@ title:  "NetSuite"
 date:   2016-08-30 11:44:20 -0600
 categories: netsuite
 collection: projects
-image: http://placehold.it/350x150
+image: http://placehold.it/150x150
+excerpt_separator: <!--exceprt-->
 ---
+
+Tenderloin ball tip pork chop, doner frankfurter tail alcatra jerky. Jerky tail prosciutto picanha, swine tri-tip t-bone. Shank meatloaf tongue fatback short ribs jowl shankle. Porchetta pork prosciutto, cow beef short loin tail picanha ham hamburger.
+
+<!--exceprt-->
+
 Project Holder for NetSuite

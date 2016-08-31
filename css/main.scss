@@ -15,6 +15,8 @@ $spacing-unit:     30px;
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #1c6ccf;
+$brand-color-light: lighten($brand-color, 25%);
+$brand-color-dark:  darken($brand-color, 25%);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -26,12 +28,21 @@ $content-width:    800px;
 $on-palm:          766px;
 $on-laptop:        800px;
 
+// Height of fixed elements
+$footer-height: 125px;
+
 // start content
 @import 'https://fonts.googleapis.com/css?family=Lato';
+
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 body {
   background: url('/img/concrete_seamless.png');
   font-family: 'Lato', sans-serif;
+  margin-bottom: $footer-height;
 }
 
 .container > header {
@@ -80,10 +91,82 @@ nav.navbar.navbar-default {
     }
   }
 }
+
+.panel {
+  .glyphicon {
+    margin-right: 10px;
+  }
+  &.panel-primary { 
+    border: 1px solid $brand-color;
+    .panel-heading {
+      background: $brand-color;
+      color: white;
+    }
+  }
+  border-radius: 0px;
+  .panel-heading {
+    border-bottom: 1px solid $brand-color-light;
+    border-radius: 0px;
+    h3 {
+      margin: 0;
+    }
+  }
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.projects {
+  .panel {
+    .panel-heading {
+      &:hover {
+        background: $brand-color-light;
+      }
+    }
+  }
+  .panel-body {
+    padding: 0px;
+    height: 150px;
+  }
+  a.post-link {
+    color: white;
+    &:hover {
+      color: white;
+    }
+    
+  }
+}
+
+.contact {
+  .contact-info {
+    text-align: center;
+    img {
+      border-radius: 250px;
+    }
+    p {
+      text-align: left;
+    }
+  }
+}
+
 section, footer {
   h2, h3 { 
     border-bottom: 5px solid $brand-color;
     padding-bottom: 10px;
+  }
+}
 
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $footer-height;
+  a {
+    color: $brand-color;
+    &:hover {
+      color: $brand-color-light;
+    }
   }
 }
