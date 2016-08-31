@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "NetSuite"
+date:   2016-08-30 11:44:20 -0600
+categories: netsuite
+collection: projects
+image: http://placehold.it/350x150
+---
+Project Holder for NetSuite

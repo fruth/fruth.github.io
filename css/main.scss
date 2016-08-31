@@ -34,13 +34,13 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-header {
+.container > header {
   border-bottom: 5px solid $brand-color;
 }
 
-main .container {
+main .container , footer.container {
   padding: 0px;
-  width: 100%;
+  width: 100% !important;
 }
 
 nav.navbar.navbar-default {
@@ -80,7 +80,7 @@ nav.navbar.navbar-default {
     }
   }
 }
-section {
+section, footer {
   h2, h3 { 
     border-bottom: 5px solid $brand-color;
     padding-bottom: 10px;
