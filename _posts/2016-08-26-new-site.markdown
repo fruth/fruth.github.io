@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "A New Site, A New Home!"
+date:   2016-08-26 11:44:20 -0600
+categories: 
+icon: "fa-lightbulb-o"
+---
+So, with a new house and a new city comes a new welcome website and blog!
+
+## The Old Stack
+
+My old site was starting to show its age. It consisted of a basic WordPress installation running on GoDaddy servers. This site was the typical LAMP installation on a webserver, administered on Shared hosting
+
+* Domain listed with GoDaddy
+* Ubuntu Linux 14.04 LTS
+* Apache Web Server
+* MySQL Database
+* PHP 5.4 Installation
+* WordPress 4.1
+
+Looking at all these components, I had to wonder if all this server overhead was required for a basic blog and information site. Did it make sense to run a database for displaying code that never changes on the fly?
+
+Not really, no.
+
+Also, my yearly hosting fee was coming up. Did it make sense to keep paying for all these unneeded components? Again, not really. So I started looking for newer solutions; ones that would perform the same tasks as WordPress without the need for so much technical overhead. The solution I found was a mix of GitHub Pages for hosting, and Jekyll for HTML content.
+
+## The New Stack
+
+* Domain hosted with Google Domains
+* Hosting with GitHub Pages
+* HTML handled by Jekyll
+* All content tracked and deployed through GIT
+
+I chose to replace WordPress with Jekyll for several key reasons. Since Jekyll is based on publishing static HTML onto a web instance instead of relying on Admin panels and databases, there was a lower risk of security hacks. My experience with WordPress has shown that many plugins and features that allow easy management also create backdoors into your site for malicious hackers to host falsified web content. Also, Jekyll is more platform-agnostic than WordPress. Getting a local copy of a Jekyll website only requires a Ruby runtime installed onto a computer, where a full version of WordPress requires a full server stack installed and configured locally onto the machine for development. Lastly, Jekyll offered built-in support for many new web technologies such as SASS compiling, CoffeeScript, and Markdown, making it the perfect candidate for a new project backbone for the next age of web development.
+
+With the new site, hosting on GitHub Pages allowed for one cost to be entirely eliminated from the project: the cost of hosting. When a site is hit with heavy loads, the cost of dynamic hosting can become insanely expensive, and may cause a total DDOS of the website if too many people try to read. Using GitHub Pages, the site is able to be hosted for free, allow for enormous amounts of traffic under GitHub's infrastructure, and prevent any sort of massive DDOS attack.
+
+This did leave one portion that needed to be handled elsewhere: the domain. I've kept the aaronfruth.com domain for awhile, and wanted to carry that over to the new site. Luckily, Google Domains allows for yearly subscriptions for domains, and allows for easy transfers. After transferring my domain to the new Google registrar and configuring GitHub pages to use the custom domain, I was ready to start the content.
+
+This method of web publishing proved much more reliable and clean.
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
