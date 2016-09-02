@@ -2,20 +2,42 @@
 layout: default
 ---
 
-<div class="home">
+<div class="blog">
 
   <h1 class="page-heading">Blog</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
+  <div class="container">
+    <div class="row">
+    
+      <div class="col-md-4">
+        <h2>Recent Posts</h2>
+        <section>
+          {% for post in site.posts %}
+            <article>
+              <p><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title | escape }} - {{ post.date | date: "%b %-d" }}
+              </a></p>
+            </article>
+          {% endfor %}
+        </section>  
+      </div>
+    
+      <section class="col-md-8">
+        {% for post in site.posts %}
+          <article>
+            <header>
+              <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                  <i class="fa {{ post.icon }}" aria-hidden="true"></i>{{ post.title | escape }}
+                </a>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              </h2>
+            </header>
+            {{ post.content }}
+          </article>
+        {% endfor %}
+      </section>
+      
+    </div>
+  </div>
 </div>

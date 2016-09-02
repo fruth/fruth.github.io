@@ -37,6 +37,13 @@ $footer-height: 125px;
 html {
   position: relative;
   min-height: 100%;
+  
+  a {
+    color: $brand-color;
+    &:hover {
+      color: $brand-color-light;
+    }
+  }
 }
 
 body {
@@ -93,9 +100,6 @@ nav.navbar.navbar-default {
 }
 
 .panel {
-  .glyphicon {
-    margin-right: 10px;
-  }
   &.panel-primary { 
     border: 1px solid $brand-color;
     .panel-heading {
@@ -107,6 +111,9 @@ nav.navbar.navbar-default {
   .panel-heading {
     border-bottom: 1px solid $brand-color-light;
     border-radius: 0px;
+    .fa {
+      margin-right: 10px;
+    }
     h3 {
       margin: 0;
     }
@@ -117,17 +124,53 @@ h1 {
   margin-bottom: 20px;
 }
 
+.blog {
+  section {
+    header {
+      border-bottom: 5px solid $brand-color;
+      margin-bottom: 15px;
+      .fa {
+        margin-right: 10px;
+      }
+      span {
+        font-size: 16px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
 .projects {
   .panel {
     .panel-heading {
       &:hover {
         background: $brand-color-light;
+        a:hover {
+          text-decoration: none;
+        }
       }
     }
   }
   .panel-body {
     padding: 0px;
     height: 150px;
+    position: relative;
+    img {
+      position: absolute;
+      left: 0px;
+      max-height: 150px;
+      max-width: 150px;
+    }
+    p {
+      margin-left: 150px;
+      padding: 5px 10px;
+      text-overflow: ellipsis;
+    }
+    a.btn-default {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
   }
   a.post-link {
     color: white;
@@ -148,9 +191,13 @@ h1 {
       text-align: left;
     }
   }
+  .alert {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
 }
 
-section, footer {
+footer {
   h2, h3 { 
     border-bottom: 5px solid $brand-color;
     padding-bottom: 10px;

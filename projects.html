@@ -19,12 +19,13 @@ layout: default
       <div class="panel panel-default panel-primary">
         <div class="panel-heading">
           <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">
-            <h3>{{ project.title | escape }}</h3>
+            <h3><i class="fa {{ project.icon }}" aria-hidden="true"></i>{{ project.title | escape }}</h3>
           </a>
         </div>
         <div class="panel-body">
           <img src="{{ project.image }}" alt="{{ project.title | escape }}">
-          
+          {{project.excerpt}}
+          <a class="btn btn-default" href="{{ project.url | prepend: site.baseurl }}" role="button">Read More...</a>
         </div>
       </div>
     </div>
