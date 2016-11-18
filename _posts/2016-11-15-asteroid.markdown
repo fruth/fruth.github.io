@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Practicing Angular.JS with Asteroids!"
+date:   2016-08-26 11:44:20 -0600
+categories: project
+icon: "fa-briefcase"
+---
+
+Recently, I learned Angular.JS through eClasses. The best way to get more practice is to build something cool with it! Attached is a link to my new Angular project, which pulls asteroid data from the NASA Public Data API, and sorts through the ones that are potentially hazardous to humankind.
+
+[Access the NASA Asteroid Tracker!](/asteroids/#/)
