@@ -1,0 +1,80 @@
+body {
+    background: url("images/twinkle_twinkle.png");
+    color: lightslategrey;
+}
+
+main {
+    width: 700px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+header {
+    color: white;
+    font-weight: bold;
+}
+
+a, a:visited {
+    color: white;
+}
+
+a:hover, a:active {
+    color: lightgray;
+}
+
+header h1 {
+    margin: 10px 5px;
+}
+
+form span.input-group-btn .btn {
+    font-size: 20px;
+}
+
+form input.form-control, form button.btn.btn-default {
+    color: white;
+    background: black;
+} 
+
+form .uib-datepicker-popup.dropdown-menu {
+    background: black;
+    border: 1px solid white;
+}
+
+.panel, .list-group-item {
+    background: none;
+}
+
+.panel .alert.alert-danger {
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+ul.asteroid-data {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.asteroid-data li {
+    display: inline;
+    position: relative;
+    text-align: center;
+}
+
+span.hazard-warning {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 8px;
+    border-radius: 0px;
+}
+
+footer ul {
+    font-size: 75%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

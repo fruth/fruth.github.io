@@ -1,0 +1,44 @@
+<!DOCTYPE HTML5>
+<html ng-app="asteroidApp">
+
+    <head>
+        <title>NASA Asteroid Tracker</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+        <link href="/styles/style.css" rel="stylesheet">
+    </head>
+    
+    <body ng-cloak>
+        
+        <main>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <header>
+                        <h1>NASA Asteroid Tracker</h1>
+                    </header>
+                    <ng-view></ng-view>
+                    <footer>
+                        <ul>
+                            <li>Built by <a href="http://aaronfruth.com/" target="_blank">Aaron Fruth</a></li>
+                            <li>Designed using <a href="https://angularjs.org/" target="_blank">Angular.JS</a> &amp; <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>.</li>
+                            <li>Background by <a href="http://subtlepatterns.com/twinkle-twinkle/" target="_blank">Subtle Patterns</a>.</li>
+                            <li>Icons by <a href="http://glyphicons.com/" target="_blank">Glyphicons</a>.</li>
+                        </ul>
+                    </footer>
+                </div>
+            </div>
+        </main>
+        
+        <script src="lib/angular.min.js" ></script>
+        <script src="lib/angular-route.min.js" ></script>
+        <script src="lib/angular-animate.min.js" ></script>
+        <script src="lib/angular-touch.min.js" ></script>
+        <script src="lib/ui-bootstrap-tpls-2.2.0.min.js" ></script>
+        <script src="app/js/app.js" ></script>
+        <script src="app/js/asteroidFilter.js" ></script>
+        <script src="app/js/asteroidService.js" ></script>
+        <script src="app/js/asteroidController.js" ></script>
+        
+    </body>
+    
+</html>

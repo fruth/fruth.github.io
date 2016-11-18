@@ -1,0 +1,56 @@
+<form class="form">
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="startDate">Start Date</label>
+            <!--input type="date" id="startDate" class="form-control" ng-model="start" ng-change="getAsteroids()" /-->
+            <!--div uib-datepicker ng-model="start" class="well well-sm" datepicker-options="options" ng-change="getAsteroids()"></div-->
+
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="yyyy-MM-dd" ng-model="start" is-open="datepicker.start.opened" ng-required="true" close-text="Close" ng-change="getAsteroids()" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="datepicker.start.opened = true;"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="endDate">End Date</label>
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="yyyy-MM-dd" ng-model="end" is-open="datepicker.end.opened" ng-required="true" close-text="Close" ng-change="getAsteroids()" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="datepicker.end.opened = true;"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="checkbox col-md-6">
+            <label for="deathPossible">
+                <input type="checkbox" id="deathPossible" ng-model="hazardousOnly" /> Potentially Hazardous Asteroids Only
+            </label>
+        </div>
+        <button type="button" class="btn btn-link left" ng-click="resetDates(true)">Reset</button>
+    </div>
+</form>
+
+<ul class="list-group">
+    <li ng-show="error" class="list-group-item alert alert-danger" role="alert">
+        {{error}}
+    </li>
+    <li class="list-group-item" ng-repeat="asteroid in asteroids | filterAsteroids:hazardousOnly | orderBy:'close_approach_data[0].close_approach_date':reverse:true ">
+        <span class="label label-danger hazard-warning" ng-show="asteroid.is_potentially_hazardous_asteroid">
+            <i class="glyphicon glyphicon-alert"></i>  Potentially Hazardous
+        </span>
+        <a href="{{asteroid.nasa_jpl_url}}" target="_blank">
+            <h4>
+                {{asteroid.name}}
+            </h4>
+        </a>
+        <p>Approach Date: {{asteroid.close_approach_data[0].close_approach_date | date}}</p>
+        <ul class="asteroid-data">
+            <li><i class="glyphicon glyphicon-dashboard"></i> Speed: {{asteroid.close_approach_data[0].relative_velocity.kilometers_per_second | number:0}} KM per Sec.</li>
+            <li><i class="glyphicon glyphicon-scale"></i> Diameter: {{asteroid.estimated_diameter.meters.estimated_diameter_min | number:0}} to {{asteroid.estimated_diameter.meters.estimated_diameter_max | number:0}} meters</li>
+            <li><i class="glyphicon glyphicon-resize-horizontal"></i> Pass Distance: {{asteroid.close_approach_data[0].miss_distance.kilometers | number:0}} KM</li>
+        </ul>
+        
+    </li>
+</ul>
