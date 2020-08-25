@@ -30,6 +30,7 @@ $on-laptop:        800px;
 
 // Height of fixed elements
 $footer-height: 125px;
+$footer-spacing: 150px;
 
 // start content
 @import 'https://fonts.googleapis.com/css?family=Lato';
@@ -49,7 +50,7 @@ html {
 body {
   background: url('/img/concrete_seamless.png');
   font-family: 'Lato', sans-serif;
-  margin-bottom: $footer-height;
+  margin-bottom: $footer-spacing;
 }
 
 .container > header {
