@@ -2,6 +2,8 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
+@import 'https://fonts.googleapis.com/css?family=Lato';
 
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -28,12 +30,8 @@ $content-width:    800px;
 $on-palm:          766px;
 $on-laptop:        800px;
 
-// Height of fixed elements
-$footer-height: 125px;
-$footer-spacing: 150px;
-
 // start content
-@import 'https://fonts.googleapis.com/css?family=Lato';
+
 
 html {
   position: relative;
@@ -47,10 +45,25 @@ html {
   }
 }
 
+
 body {
-  background: url('/img/concrete_seamless.png');
+	background: linear-gradient(-45deg, #1c6cce, #6cce1c, #7e1cce);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+	height: 100vh;
   font-family: 'Lato', sans-serif;
-  margin-bottom: $footer-spacing;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .container > header {
@@ -202,19 +215,5 @@ footer {
   h2, h3 { 
     border-bottom: 5px solid $brand-color;
     padding-bottom: 10px;
-  }
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: $footer-height;
-  a {
-    color: $brand-color;
-    &:hover {
-      color: $brand-color-light;
-    }
   }
 }
