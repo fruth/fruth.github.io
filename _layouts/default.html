@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 
-<html>
+<html class="h-100">
   <head>
     {% include head.html %}
   </head>
   
-  <body>
+  <body class="d-flex flex-column h-100">
 
-    {% include header.html %}
+    
 
-    <div class="container"> 
-      <main>
+    
+    <main class="flex-shrink-0">
+      {% include header.html %}
+      <div class="container"> 
         {{ content }}
-      </main>
+      </div>
     </main>
     
   </div>
