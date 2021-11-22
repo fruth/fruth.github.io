@@ -70,6 +70,11 @@ body {
   border-bottom: 5px solid $brand-color;
 }
 
+#welcome-message {
+  background-image: url("/img/images/welcome-image2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .feature-icon {
   display: inline-flex;
   align-items: center;
