@@ -70,88 +70,19 @@ body {
   border-bottom: 5px solid $brand-color;
 }
 
-
-.panel {
-  &.panel-primary { 
-    border: 1px solid $brand-color;
-    .panel-heading {
-      background: $brand-color;
-      color: white;
-    }
-  }
-  border-radius: 0px;
-  .panel-heading {
-    border-bottom: 1px solid $brand-color-light;
-    border-radius: 0px;
-    .fa {
-      margin-right: 10px;
-    }
-    h3 {
-      margin: 0;
-    }
-  }
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: .75rem;
+  background-color: $brand-color;
 }
 
-h1 {
-  margin-bottom: 20px;
-}
-
-.blog {
-  section {
-    header {
-      border-bottom: 5px solid $brand-color;
-      margin-bottom: 15px;
-      .fa {
-        margin-right: 10px;
-      }
-      span {
-        font-size: 16px;
-        margin-left: 5px;
-      }
-    }
-  }
-}
-
-.projects {
-  .panel {
-    .panel-heading {
-      &:hover {
-        background: $brand-color-light;
-        a:hover {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-  .panel-body {
-    padding: 0px;
-    height: 150px;
-    position: relative;
-    img {
-      position: absolute;
-      left: 0px;
-      max-height: 150px;
-      max-width: 150px;
-    }
-    p {
-      margin-left: 150px;
-      padding: 5px 10px;
-      text-overflow: ellipsis;
-    }
-    a.btn-default {
-      position: absolute;
-      right: 10px;
-      bottom: 10px;
-    }
-  }
-  a.post-link {
-    color: white;
-    &:hover {
-      color: white;
-    }
-    
-  }
-}
 
 .contact {
   .contact-info {

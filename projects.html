@@ -4,35 +4,31 @@ layout: default
 
 <div class="projects">
 
-  <h1 class="page-heading">Projects</h1>
-  
-  <div class="container">
+  <div class="container px-4 py-5" id="featured-3">
+    <h1 class="pb-2 border-bottom">Projects</h1>
 
-  {% assign loopindex = 0 %}
-  {% for project in site.projects %}                     
-    {% assign loopindex = loopindex | plus: 1 %}
-    {% assign rowfinder = loopindex | modulo: 4 %}
-    {% if rowfinder == 1 %}
-      <div class="row">
-    {% endif %}
-    <div class="col-md-6">
-      <div class="panel panel-default panel-primary">
-        <div class="panel-heading">
-          <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">
-            <h3><i class="fa {{ project.icon }}" aria-hidden="true"></i>{{ project.title | escape }}</h3>
+    {% assign loopindex = 0 %}
+    {% for project in site.projects %}                     
+      {% assign loopindex = loopindex | plus: 1 %}
+      {% assign rowfinder = loopindex | modulo: 2 %}
+      {% if rowfinder == 1 %}
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+      {% endif %}
+        <div class="feature col">
+          <div class="feature-icon bg-primary bg-gradient">
+            <svg class="bi" width="1em" height="1em" fill="white"><use xlink:href="/img/bootstrap-icons.svg#{{ project.icon }}"></use></svg>
+          </div>
+          <h3>{{ project.title | escape }}</h3>
+          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <a href="{{ project.url | prepend: site.baseurl }}" class="icon-link">
+            Call to action
+            <svg class="bi" width="1em" height="1em"><use xlink:href="/img/bootstrap-icons.svg#chevron-right"></use></svg>
           </a>
         </div>
-        <div class="panel-body">
-          <img src="{{ project.image }}" alt="{{ project.title | escape }}">
-          {{project.excerpt}}
-          <a class="btn btn-default" href="{{ project.url | prepend: site.baseurl }}" role="button">Read More...</a>
-        </div>
+    {% endfor %}
+    {% if rowfinder != 0 %}
       </div>
-    </div>
-  {% endfor %}
-  {% if rowfinder != 0 %}
-    </div>
-  {% endif %}
+    {% endif %}
   
   </div>
 
