@@ -4,6 +4,7 @@ title:  "A New Site, A New Home!"
 date:   2016-08-26 11:44:20 -0600
 categories: 
 icon: "fa-lightbulb-o"
+image: "/img/images/welcome-image.jpg"
 ---
 So, with a new house and a new city comes a new welcome website and blog!
 
