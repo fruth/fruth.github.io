@@ -70,6 +70,10 @@ body {
   border-bottom: 5px solid $brand-color;
 }
 
+main {
+  flex-grow: 1;
+}
+
 #welcome-message {
   background-image: url("/img/images/welcome-image2.jpg");
   background-repeat: no-repeat;

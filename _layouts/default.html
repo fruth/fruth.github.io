@@ -7,21 +7,17 @@
   
   <body class="d-flex flex-column h-100">
 
+    {% include header.html %}
     
+    <main class="container bg-light p-0"> 
+      {{ content }}
+    </main>
 
+    {% include footer.html %}
     
-    <div class="flex-shrink-0 px-0">
-      {% include header.html %}
-      <div class="px-3">
-        <main class="container bg-light p-0"> 
-          {{ content }}
-        </main>
-      </div>
-    </div>
-    
-  </div>
+  </body>
   
-  {% include footer.html %}
+  
 
 </html>
 
