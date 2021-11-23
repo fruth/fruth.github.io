@@ -74,6 +74,10 @@ main {
   flex-grow: 1;
 }
 
+#contact .img-thumbnail {
+  border-radius: 200px;
+}
+
 #welcome-message {
   background-image: url("/img/images/welcome-image2.jpg");
   background-repeat: no-repeat;
