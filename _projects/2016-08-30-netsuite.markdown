@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title:  "NetSuite"
 date:   2016-08-30 11:44:20 -0600
 categories: netsuite
