@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="container px-4 py-5" id="blog-list">
+    <h1 class="pb-3 border-bottom">Blog</h1>
+  
+    <div class="row g-4 py-5">
+  
+      <div class="col-lg-4">
+        <h4 class="mb-3">Recent Posts</h4>
+        <section>
+          {% for post in site.posts %}
+            <article>
+              <p><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title | escape }} - {{ post.date | date: "%b %-d" }}
+              </a></p>
+            </article>
+          {% endfor %}
+        </section>  
+      </div>
+  
+      <section class="col-lg-8">
+        
+        {{ content }}
+  
+      </section>
+    </div>
+  
+  </div>

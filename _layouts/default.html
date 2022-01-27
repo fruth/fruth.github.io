@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 
-<html>
+<html class="h-100">
   <head>
     {% include head.html %}
   </head>
   
-  <body>
-    <div class="container">
-      <header>
-        {% include header.html %}
-      </header>
-      
-      <main>
-        {{ content }}
-      </main>
-    </main>
+  <body class="d-flex flex-column h-100">
+
+    {% include header.html %}
     
+    <main class="container bg-light p-0"> 
+      {{ content }}
+    </main>
+
     {% include footer.html %}
     
-  </div>
+  </body>
+  
+  
+
 </html>
 

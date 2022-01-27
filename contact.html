@@ -2,35 +2,18 @@
 layout: default
 ---
 
-<div class="contact">
-
-  <h1 class="page-heading">Contact Me</h1>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 contact-info">
-        <img class="img-circle" src="/img/face.jpg">
-        <h3>Aaron Fruth</h3>
-        <p>My name is Aaron Fruth, and I'm a web developer living currently in Lakewood, CO! I'm currently working in new web technologies such as Node.js, Angular.js, PHP, Laravel, SASS and LESS, and future web development frameworks.</p>
-        <p>I enjoy building maps, photographing landscapes, and biking. Also, I reside with my boyfriend and a fluffy cat that is only interested in food!</p>
-      </div>
-    
-      <div class="col-md-8">
-        <div class="panel">
-          <div class="panel-heading">
-            <h3><i class="fa fa-envelope" aria-hidden="true"></i>Send an Email</h3>
-          </div>
-          <div class="panel-body">
-            
-            <p>Feel like saying that to my face? Well, you can! Just leave a message below regarding your reason for contact and I will reach out to you as soon as I am available.</p>
-            
-            {% include contact_form.html %}
-
-          </div>
-        </div>
-      </div>
-    
+<div class="container px-4 py-5" id="contact">
+  <h1 class="pb-3 border-bottom">Contact</h1>
+  <div class="row g-4 py-5">
+    <div class="col-lg-4">
+      <img src="/img/face.jpg" class="img-thumbnail shadow border d-block mx-auto" alt="...">
+      <h3 class="text-center my-3">Aaron Fruth</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis elit aliquam, gravida nibh nec, pellentesque lorem. Etiam maximus sed erat eget elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non bibendum ipsum. Sed ac ante quis sem blandit pulvinar ac sit amet nulla. Etiam maximus sem vel facilisis consequat. Vivamus rhoncus velit vel ante vehicula, in maximus ipsum euismod. Morbi accumsan pharetra pretium. Vestibulum quis porttitor odio. Nunc tempus elementum justo, et eleifend quam tincidunt vel. Nullam pulvinar auctor mi eu rutrum. Etiam nibh enim, porta id purus nec, volutpat imperdiet orci. Suspendisse potenti. Vivamus nibh eros, fringilla in tincidunt vel, suscipit at diam. In sit amet tincidunt odio. In hac habitasse platea dictumst. </p>
+    </div>
+    <div class="col-lg-8">
+      {% include contact_form.html %}
     </div>
   </div>
+
 
 </div>
